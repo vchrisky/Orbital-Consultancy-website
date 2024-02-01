@@ -1,0 +1,240 @@
+/* ----------------------------------------------------------------
+	Custom CSS
+
+	Add all your Custom Styled CSS here for New Styles or
+	Overwriting Default Theme Styles for Better Handling Updates
+-----------------------------------------------------------------*/
+
+@font-face {
+	font-family: 'Lato';
+	src: url(fonts-import/Lato/Lato-Regular.ttf);
+}
+
+@font-face {
+	font-family: 'Raleway';
+	src: url(fonts-import/Raleway/Raleway-VariableFont_wght.ttf);
+}
+
+@font-face {
+	font-family: 'Poppins';
+	src: url(fonts-import/Poppins/Poppins-Regular.ttf);
+}
+
+@font-face {
+	font-family: 'Amaranth';
+	src: url(fonts-import/Amaranth/Amaranth-Regular.ttf);
+}
+
+@font-face {
+	font-family: 'Montserrat';
+	src: url(fonts-import/Montserrat/Montserrat-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: 'Crete'
+}
+
+:root {
+	--themecolor:  #fE9603;
+	--buttonthemecolor: rgba(254,150,3,0.15);
+	--badgethemecolor: rgba(254,150,3,0.09);
+	--basefontsize: 16px;
+	--fontfamily: 'Poppins', sans-serif;
+	--headerboxshadow: 0 0 10px 5px rgba(0, 0, 0, 0.05);;
+	--menufontsize: 15px;
+}
+
+.dark-mode {
+/*
+	position: fixed;
+	top: auto;
+	right: 11px;
+	bottom: 80px;
+	text-align: center;
+	margin: 0 auto;
+	z-index: 2;
+*/
+    cursor: pointer;
+}
+
+.dark-mode i {
+	display: block;
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	font-size: 16px;
+	color: #FFF !important;
+	background-color: #111;
+	border-radius: 50%;
+	margin: 0 auto;
+}
+
+.dark-mode span {
+	display: block;
+	opacity: 0;
+	color: #000;
+	font-size: 14px;
+	font-weight: 500;
+	text-align: center;
+	margin: 0;
+	-webkit-transform: translateY(10px);
+	-ms-transform: translateY(10px);
+	-o-transform: translateY(10px);
+	transform: translateY(10px);
+	-webkit-transition: transform .3s, opacity .3s;
+	-o-transition: transform .3s, opacity .3s;
+	transition: transform .3s, opacity .3s;
+	-webkit-backface-visibility: hidden;
+}
+
+.dark-mode:hover span {
+	opacity: 1;
+	margin-bottom: 7px;
+	-webkit-transform: translateY(0);
+	-ms-transform: translateY(0);
+	-o-transform: translateY(0);
+	transform: translateY(0);
+}
+
+.dark .dark-mode i {
+	color: #111 !important;
+	background-color: #FFF;
+	-webkit-transform: rotate(180deg);
+	-ms-transform: rotate(180deg);
+	-o-transform: rotate(180deg);
+	transform: rotate(180deg);
+}
+
+.dark-mode:hover i{
+    transition: transform .3s;
+}
+
+.dark .dark-mode span { color: #FFF; }
+
+#top-switch{
+    float: right;
+    margin: 0;   
+}
+
+#top-switch{
+/*   margin: 35px 0 34px 20px; */
+}
+
+#top-switch a{
+    -webkit-transition: color .3s ease-in-out;
+	-o-transition: color .3s ease-in-out;
+	transition: color .3s ease-in-out;
+}
+
+#top-switch a span{
+    margin-left: 5px;
+    font-weight: 700;
+}
+
+@media (max-width: 991.98px){
+    #top-switch {
+    position: absolute;
+    top: 0;
+    left: auto;
+    right: 15px;
+    margin: 40px 0;
+    -webkit-transition: margin .4s ease;
+    -o-transition: margin .4s ease;
+    transition: margin .4s ease;
+    margin: 10px 0 32px 0px;
+/*    right: 75px;*/
+    }
+    
+}
+
+@media (max-width: 575.98px){
+    #top-switch {right: 0px};
+}
+
+#header.sticky-header:not(.static-sticky) #top-switch{
+    margin-top: -10px !important;
+    margin-bottom: 14px !important;
+}
+
+#header.sticky-header:not(.static-sticky) #top-switch .dark-mode span{
+    position: relative;
+    top: 30px;
+    left: 60px;
+    -webkit-transform: translateX(-10px);
+	-ms-transform: translateX(-10px);
+	-o-transform: translateX(-10px);
+	transform: translateX(-10px);
+	-webkit-transition: transform .3s, opacity .3s;
+	-o-transition: transform .3s, opacity .3s;
+	transition: transform .3s, opacity .3s;
+	-webkit-backface-visibility: hidden;
+}
+
+#header.sticky-header:not(.static-sticky) #top-switch .dark-mode:hover span{
+    opacity: 1;
+/*	margin-bottom: 7px;*/
+	-webkit-transform: translateX(0);
+	-ms-transform: translateX(0);
+	-o-transform: translateX(0);
+	transform: translateX(0);
+}
+
+#header.sticky-header:not(.static-sticky) #top-switch .dark-mode:hover i{
+    opacity: 1;
+    margin-left: 7px;
+    margin-top: -7px;
+    transition: transform .3s;
+}
+
+.badge {
+	padding: 8px;
+	font-size: 12px;
+	margin-bottom: 15px;
+	border-radius: 2px;
+	font-weight: 500;
+	line-height: .8;
+}
+
+.badge.badge-default {
+	border: 1px solid var(--themecolor);
+	color: var(--themecolor);
+}
+
+.testimonials-carousel .owl-stage { padding-top: 40px }
+
+.testimonials-carousel .owl-item {
+	opacity: .6;
+	transition: transform .3s ease;
+	transform: scale(0.8);
+}
+
+.testimonials-carousel .owl-item.active.center {
+	opacity: 1;
+	transform: scale(1);
+}
+
+.testimonial {
+	border: 0;
+	box-shadow: 0 0 35px rgba(140, 152, 164, 0.2);
+	border-radius: 0.25rem;
+	padding: 25px;
+}
+
+.testi-image {
+	float: none;
+	margin: -55px auto 0;
+	margin-bottom: 20px;
+}
+
+.testi-content p {
+	text-align: center;
+	font-style: normal;
+	font-family: var(--fontfamily);
+	font-size: var(--basefontsize);
+}
+
+.testi-meta {
+	text-align: center;
+	margin-top: 20px;
+}
